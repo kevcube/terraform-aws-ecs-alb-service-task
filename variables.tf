@@ -206,13 +206,6 @@ variable "volumes" {
   type = list(object({
     host_path = string
     name      = string
-    docker_volume_configuration = list(object({
-      autoprovision = bool
-      driver        = string
-      driver_opts   = map(string)
-      labels        = map(string)
-      scope         = string
-    }))
     efs_volume_configuration = list(object({
       file_system_id          = string
       root_directory          = string
