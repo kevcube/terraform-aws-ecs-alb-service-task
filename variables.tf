@@ -204,7 +204,6 @@ variable "health_check_grace_period_seconds" {
 
 variable "volumes" {
   type = list(object({
-    host_path = string
     name      = string
     efs_volume_configuration = list(object({
       file_system_id          = string
